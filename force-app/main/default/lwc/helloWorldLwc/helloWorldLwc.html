@@ -1,0 +1,26 @@
+<template>
+ <div>Hello World</div>   
+ <div>{fullName}</div>   
+ <div>{details.name}</div>
+
+ <lightning-card  title="Two way Data binding">
+    <div class="slds-m-horizontal_medium">
+    <lightning-input type="text" label="Enter text" onkeyup={changeEventHandler}></lightning-input><!--remember method calling of js come in flower bracket-->
+     This is {fullName} and course is {title}
+    </div>
+</lightning-card>
+<lightning-card  title="@track properties">
+    <div class="slds-m-horizontal_medium">
+    <lightning-input type="text" label="Enter text" onkeyup={changeTrackProp}></lightning-input><!--remember method calling of js come in flower bracket-->
+     This is name {details.name} 
+    </div>
+</lightning-card>
+
+<lightning-card  title="getter Example">
+    <div class="slds-m-horizontal_medium">
+     Name is {changeUser}<br>
+     Multiply {num1} and {num2} {multiply}
+    </div>
+</lightning-card>
+
+</template>
