@@ -1,0 +1,47 @@
+<template>
+    <lightning-card  title="for each Looping">
+        <div class="slds-m-around_medium">
+       <template for:each={carList} for:item="car"> 
+       <ul key ={car} class="slds-has-dividers_top slds-has-block-links">
+        <li class="slds-item">
+          <a href="#">{car}</a>
+        </li>
+      </ul>
+    </template>
+        </div>
+    </lightning-card>
+    <lightning-card  title="for each Loop with Array of Objects">
+        <div class="slds-m-around_medium">
+       <template for:each={ceoList} for:item="list"> 
+       <ul key ={list.id} class="slds-has-dividers_top slds-has-block-links">
+        <li class="slds-item">
+          <a href="#">{list.name}   {list.company}</a>
+        </li>
+      </ul>
+    </template>
+        </div>
+    </lightning-card>
+    <!--USECASE for iterator loop:When you want to attach the items before the loop and after the loop-->
+    <lightning-card  title="Iterator">
+        <div class="slds-m-around_medium">
+            <template iterator:ceo={ceoList}>
+                    <ul key = {ceo.value.id} class="slds-has-dividers_top slds-has-block-links">
+                        <template if:true={ceo.first}>
+                            <div class="slds-box slds-theme_shade">
+                            <strong>He is the First Company CEO </strong> 
+                            </div>
+                        </template>
+                        <li class="slds-box slds-box_small">
+                            <strong>{ceo.value.Company}</strong>&nbsp; &nbsp;
+                            {ceo.value.name}
+                          </li>
+                          <template if:true={ceo.last}>
+                            <div class="slds-box slds-theme_shade">
+                             <strong> He is the Last Company CEO </strong> 
+                            </div>
+                          </template>
+                    </ul>
+            </template>
+        </div>
+    </lightning-card>
+</template>
