@@ -1,0 +1,17 @@
+<template>
+<lightning-card  title="Dynamic css">
+    <div class="slds-m-around_medium" >
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left" style= "padding-bottom :20px"  >
+                <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                </svg>
+                <input type="text" id="text-input-id-1" placeholder="Placeholder text…" class="slds-input" onkeyup={changeHandler} value={percent} />
+            </div>
+            </div> 
+            
+    <div style= {percentageCalc} class="slds-notify slds_notify_alert slds_theme_alert-texture slds-theme_error" role="alert">Hello I am an Alert</div>
+    </div>
+</lightning-card>  
+</template>
