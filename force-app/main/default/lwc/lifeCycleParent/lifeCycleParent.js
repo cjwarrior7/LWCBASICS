@@ -21,4 +21,16 @@ changeHandler(event){
 get percentageCalc(){
 return `width:${this.percent}%`;
 }
+
+ischildVisible = false ;
+handleClick(){
+  this.ischildVisible =   !this.ischildVisible ;
 }
+
+ errorCallback(error, stack){
+ console.log(error.message);
+ console.log(stack);
+ }
+
+ }
+ 

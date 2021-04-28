@@ -12,7 +12,15 @@
                         </div> 
                         
                 <div style = {percentageCalc} class="slds-notify slds_notify_alert slds_theme_alert-texture slds-theme_error" role="alert">Hello I am an Alert</div>
+                <template if:false = {ischildVisible}>
+                <button class="slds-button slds-button_brand" onclick={handleClick} >Show Child</button>
+                 </template>
+                <template if:true = {ischildVisible}>
+                <button class="slds-button slds-button_brand" onclick={handleClick} >Remove Child</button>
+                 </template>
+                <template if:true = {ischildVisible}>
                 <c-life-cycle-child></c-life-cycle-child>
+                 </template>
             </div>
             </lightning-card>
 </template>

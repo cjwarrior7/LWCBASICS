@@ -9,8 +9,14 @@ export default class LifeCycleChild extends LightningElement {
 
     connectedCallback(){
         console.log('Child connectedCallback called'); 
+        //window.addEventListener('click',this.handleClick);
+        throw new Error('Load of child Component failed');
     }
     renderedCallback(){
         console.log('Child renderCallback called'); 
     } 
+    disconnectedCallback(){
+        alert('Child Disconnected Callback called');
+        //window.removeEventListener('click',this.handleClick);//avoid memory Leak and to Increase performance of code
+    }
 }
