@@ -1,0 +1,18 @@
+<template>
+<lightning-card>
+    <div class="slds-size_3-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Carousel With disable-auto-scroll Attribute
+        <lightning-carousel disable-auto-scroll>
+                <template for:each={carouselData} for:item="caro">
+                <lightning-carousel-image
+                    key = {caro.src}
+                    src = {caro.src} 
+                    header = {caro.header}
+                    description = {caro.description}>
+                </lightning-carousel-image>
+                </template>
+            </lightning-carousel>
+        </div>
+  </div>
+</lightning-card>   
+</template>
