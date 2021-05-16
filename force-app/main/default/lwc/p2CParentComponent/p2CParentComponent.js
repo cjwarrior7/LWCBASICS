@@ -25,5 +25,11 @@ description : "Third card description."
 
 }
 ]
+Percentage = 10;
+
+changeHandler(event){
+    this.Percentage = event.target.value;
+
+}
 
 }
