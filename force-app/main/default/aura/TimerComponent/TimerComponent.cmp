@@ -1,0 +1,22 @@
+<aura:component>
+<aura:attribute name="mintues" type="Integer" />   
+<aura:attribute name="countmin" type="Integer" default="0"/>
+<aura:attribute name="countsec" type="Integer" default="0"/>
+<lightning:card variant="Narrow" title="Countdown timer" iconName="standard:date_time">
+    <lightning:layout multipleRows="true" >
+        <lightning:layoutItem padding="around-small" size="12">
+        <lightning:input type="number" name="input1" label="Enter Mintues" value="{!v.mintues}" onchange="{!c.changeMintues}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" size="12">
+           <div class="slds-align_absolute-center" style="font-size: 60px;color:orangered;background-color:black">
+               {!v.countmin} MINTUES  : {!v.countsec} SECONDS
+           </div>
+           </lightning:layoutItem>
+           <lightning:layoutItem padding="around-small" size="12">
+            <div class="slds-align_absolute-center">
+                <lightning:button variant="brand" label="Start Timer" onclick ="{!c.startTime}" />
+            </div>
+            </lightning:layoutItem>
+    </lightning:layout>
+</lightning:card>
+</aura:component>	
